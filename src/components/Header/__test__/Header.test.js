@@ -1,10 +1,12 @@
 import { render, screen } from "@testing-library/react";
 import Header from "../Header";
 
-test("Render same text which passes to title props", () => {
-  render(<Header title="My Title" />);
-  const headingElement = screen.getByText(/my title/i);
-  expect(headingElement).toBeInTheDocument();
+describe("Header Test Block", () => {
+  test("Render same text which passes to title props", () => {
+    render(<Header title="My Title" />);
+    const headingElement = screen.getByText(/my title/i);
+    expect(headingElement).toBeInTheDocument();
+  });
 });
 
 // test('Render title component with getByRole',  () => {
